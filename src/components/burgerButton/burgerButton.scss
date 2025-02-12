@@ -1,0 +1,19 @@
+.burgerButton {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px; /* Ширина всей иконки */
+    height: 12px; /* Высота всей иконки */
+    // padding: 20px;
+    cursor: pointer;
+  }
+  
+  .burgerButton_bar {
+    width: 18px;
+    height: 2px; /* Высота полоски */
+    background-color: white;
+    opacity: 0.5; /* Цвет полосок */
+    border-radius: 2px; /* Немного закругленные края */
+  }
+  
