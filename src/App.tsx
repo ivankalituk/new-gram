@@ -1,10 +1,16 @@
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import './App.scss'
+import ChatPage from './pages/chatPage/chatPage'
 
 function App() {
 
   return (
     <div>
-      NEW PROJECT, NO r18 PROBLEM
+
+      <Routes>
+        <Route path='/' element={<ChatPage />}></Route>
+      </Routes>
+
     </div>
   )
 }
