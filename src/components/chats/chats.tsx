@@ -4,6 +4,7 @@ import SearchBar from "../searchBar/searchBar";
 import BurgerButton from "../burgerButton/burgerButton";
 import { useBlockResize } from "../../hooks/useBlockResize";
 import NoScrollList from "../noScrollList/noScrollList";
+import Chat from "../chat/chat";
 
 const Chats: FC = () => {
 
@@ -17,7 +18,16 @@ const Chats: FC = () => {
                     <SearchBar />
                 </div>
 
-                <NoScrollList />
+                <div className="chats_main">
+                    <NoScrollList />
+
+                    <div className="chats_chatsList_list">
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                    </div>
+                </div>
 
             </div>
             

@@ -3,7 +3,7 @@ import './noScrollList.scss'
 const NoScrollList: FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [selectedItem, setSelectedItem] = useState<number>(0) 
-    const folders = ["Все", "Работа", "Личное", "Избранное", "Группы", "Каналы", "Боты"];
+    const folders = ["All", "Работа", "Личное", "Избранное", "Группы", "Каналы", "Боты"];
 
 
     const handleClick = (index: number) => {
