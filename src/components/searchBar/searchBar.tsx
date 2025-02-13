@@ -4,11 +4,8 @@ import SearchSVG from "../../assets/controled images/searchSVG";
 
 const SearchBar: FC = () => {
 
-    const [searchBarFocus, setSearchBarFocus] = useState<boolean>(false)
-
-    const [color, setColor] = useState<string>('#766ac8');  
-
     // смена цвета при фокусировке на сёрчбар
+    const [searchBarFocus, setSearchBarFocus] = useState<boolean>(false)
 
     const searchBarOnFocus = () =>{
         setSearchBarFocus(true)
