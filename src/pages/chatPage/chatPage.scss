@@ -1,5 +1,6 @@
 @use '../../assets/styles/variables.scss' as vars;
 
 .chatPage {
-    background-color: vars.$color-black-dark;
+    background-color: black;
+    display: flex;
 }

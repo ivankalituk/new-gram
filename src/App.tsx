@@ -8,6 +8,7 @@ function App() {
     <div>
 
       <Routes>
+        <Route path='/chat/:chatId' element={<ChatPage />}></Route>
         <Route path='/' element={<ChatPage />}></Route>
       </Routes>
 

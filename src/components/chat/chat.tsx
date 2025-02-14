@@ -3,10 +3,11 @@ import './chat.scss'
 import sampleChatImg from '../../assets/images/sampleChat.jpg'
 import MutedSVG from "../../assets/controled images/mutedSVG";
 import { createRipple } from "../../utils/rippleAnimation";
+import { Link } from "react-router-dom";
 
 const Chat: FC = () => {
     return(
-        <div className="chat" onClick={createRipple}>
+        <Link className="chat" onClick={createRipple} to={`/chat/${1}`}>
             <img src={sampleChatImg} alt="chatImg" />
             
             <div className="chat_info">
@@ -24,7 +25,7 @@ const Chat: FC = () => {
 
                 <div className="chat_info_messange"><span>You:</span>{" Last message sample text long long "}</div>
             </div>
-        </div>
+        </Link>
     )
 }
 
