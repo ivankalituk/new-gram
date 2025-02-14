@@ -2,10 +2,11 @@ import { FC } from "react";
 import './chat.scss'
 import sampleChatImg from '../../assets/images/sampleChat.jpg'
 import MutedSVG from "../../assets/controled images/mutedSVG";
+import { createRipple } from "../../utils/rippleAnimation";
 
 const Chat: FC = () => {
     return(
-        <div className="chat">
+        <div className="chat" onClick={createRipple}>
             <img src={sampleChatImg} alt="chatImg" />
             
             <div className="chat_info">

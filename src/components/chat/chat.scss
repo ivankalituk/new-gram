@@ -2,6 +2,8 @@
 
 
 .chat {
+    cursor: pointer;
+    position: relative;
     height: 72px;
     box-sizing: border-box;
     padding: 9px;
@@ -19,6 +21,17 @@
 
     &:hover {
         background-color: vars.$color-black-light;
+    }
+
+    & .ripple{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        opacity: 0.1;
+        transform: scale(0);
+        animation: ripple-animation 0.5s linear;
     }
 
     > .chat_info {
@@ -69,5 +82,24 @@
                 flex-shrink: 0; // "You:" не должен сжиматься
             }
         }
+    }
+}
+
+
+// .ripple {
+//     position: absolute;
+//     width: 20px;
+//     height: 20px;
+//     background: rgba(255, 255, 255, 0.6);
+//     border-radius: 50%;
+//     opacity: 0.1;
+//     transform: scale(0);
+//     animation: ripple-animation 1.5s linear;
+// }
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(10);
+        opacity: 0;
     }
 }
