@@ -19,7 +19,10 @@ const Conversation: FC = () => {
             </div>
 
               <div className="conversation_main">
-                
+                <div className="conversation_main_messages">
+                    MESSAGESS
+                </div>
+
                 <MessageInput />
               </div>
         </div>
