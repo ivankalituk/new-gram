@@ -2,6 +2,7 @@ import { FC } from "react";
 import './conversation.scss'
 
 import chatImgSample from '../../assets/images/sampleChat.jpg'
+import MessageInput from "../messageInput/messageInput";
 
 const Conversation: FC = () => {
     return(
@@ -18,7 +19,8 @@ const Conversation: FC = () => {
             </div>
 
               <div className="conversation_main">
-                SOME STUFF
+                
+                <MessageInput />
               </div>
         </div>
     )

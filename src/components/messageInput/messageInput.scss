@@ -1,0 +1,10 @@
+@use '../../assets/styles/variables.scss' as vars;
+
+
+.messageInput{
+    height: 56px;
+
+    > .messageInput_container{
+        display: flex;
+    }
+}
