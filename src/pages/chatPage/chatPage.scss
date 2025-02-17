@@ -1,6 +1,7 @@
 @use '../../assets/styles/variables.scss' as vars;
 
 .chatPage {
-    background-color: black;
+    // background-color: black;
+    background-image: url('../../assets/images/background.png');
     display: flex;
 }
