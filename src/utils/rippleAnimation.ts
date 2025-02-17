@@ -16,4 +16,4 @@ export const createRipple = (event: React.MouseEvent<HTMLDivElement>) => {
 }
 
 // ONLY WITH PIOSITION RELATIVE AND OVERFLOW HIDEN ON THE ELEMENT 
-// SHOUD HAVE ripple CLASS
+// SHOUD HAVE .ripple and ripple-animation keyframes

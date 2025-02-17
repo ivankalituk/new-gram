@@ -8,12 +8,26 @@
     background-color: vars.$color-black-light;
     border-radius: 22px;
     align-items: center;
+    transition: background-color 0.3s, border 0.3s;
 
     > .searchBar_searchSvg{
         width: 22px;
         height: 22px;
         margin-left: 13px;
         margin-bottom: 1px;
+
+        > .searchSVG{
+            stroke-width: 1;
+            fill: #6b6b6b;
+            stroke: #6b6b6b;
+            transition: fill 0.3s;
+
+            &.focus{
+                fill: #766ac8;
+                stroke: #766ac8;
+                transition: fill 0.3s, stroke 0.3s;
+            }
+        }
     }
 
     > input{
@@ -39,6 +53,7 @@
 
         &:focus{
             border-color: vars.$color-blue-light;
+            transition: background-color 0.3s;
         }
     }
 }
@@ -46,4 +61,5 @@
 .searchBar_focus{
     border: 2px solid vars.$color-blue-light;
     background-color: vars.$color-black-dark;
+    transition: border 0.3, background-color 0.3;
 }
