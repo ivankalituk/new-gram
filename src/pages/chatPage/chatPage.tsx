@@ -8,6 +8,7 @@ const ChatPage: FC = () => {
 
     const {chatId} = useParams()
 
+    
     return(
         <div className="chatPage">
             <Chats />
