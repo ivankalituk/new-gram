@@ -50,8 +50,13 @@
         flex-direction: column;
 
         > .conversation_main_messages {
+            margin: 10px 0;
             flex: 1;
             overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex-direction: column-reverse;
         }
     }
 }

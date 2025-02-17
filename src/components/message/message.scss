@@ -1,0 +1,20 @@
+@use '../../assets/styles/variables.scss' as vars;
+
+.message{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: start;
+
+    > .message_container{
+        max-width: 60%;
+        padding: 5px 8px 6px 8px;
+        border-radius: 12px;
+        background-color: vars.$color-black-light;
+        box-shadow: 0 1px 2px rgb(16,16,16,0.612);
+    }
+
+    > .message_text{
+        overflow-wrap: break-word;
+    }
+}

@@ -26,7 +26,7 @@ const MessageInput: FC = () => {
             </div>
             
             <button className="messageInput_accept" onMouseEnter={enableAcceptHover} onMouseLeave={disableAcceptHover}>
-                <div><SendMessageSVG color={acceptHover? "#FFFFFF" : "#766ac8"}/></div>
+                <SendMessageSVG color={acceptHover? "#FFFFFF" : "#766ac8"}/>
             </button>
         </div>
     )

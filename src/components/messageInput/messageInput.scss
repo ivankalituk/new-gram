@@ -6,7 +6,7 @@
     display: flex;
     gap: 8px;
     margin-bottom: 20px;
-    
+
     > .messageInput_bar{
         flex: 1;
         background-color: vars.$color-black-dark;
@@ -39,6 +39,7 @@
     }
 
     > .messageInput_accept{
+        flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -49,6 +50,13 @@
         outline: none;
         background-color: vars.$color-black-dark;
         transition: 0.3s;
+
+        >svg{
+            position: relative;
+            top: -0.5px;
+            left: -1px;
+
+        }
 
         &:hover{
             background-color: vars.$color-blue-light;
