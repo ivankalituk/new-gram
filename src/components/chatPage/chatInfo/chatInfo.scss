@@ -146,6 +146,45 @@
                 
             }
 
+            > .chatInfo_action_clickable{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                padding: 10px 20px;
+                border-radius: 12px;
+                transition: background-color 0.3s;
+                cursor: pointer;
+
+                >img{
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &:hover{
+                    background-color: vars.$color-black-light;
+                    transition: background-color 0.3s;
+                }
+
+                > .chatInfo_action_infoContainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    > .chatInfo_action_text{
+                        color: white;
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
+
+                    > .chatInfo_action_explain{
+                        color: vars.$color-gray;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
+                
+            }
+
             > .chatInfo_action_switch{
                 display: flex;
                 align-items: center;
@@ -153,7 +192,7 @@
                 padding: 10px 20px;
                 border-radius: 12px;
                 transition: background-color 0.3s;
-                
+
                 &:hover{
                     background-color: vars.$color-black-light;
                     transition: background-color 0.3s;

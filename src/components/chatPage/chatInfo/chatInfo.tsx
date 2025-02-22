@@ -16,12 +16,22 @@ interface ChatInfo {
 
 const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
 
+    // RESIZING
     const {handleMouseDown: handleChatsResize, blockSize: chatsSize} = useBlockResize(400, 500, 439, true)
     
+    // NOTIFICATIONS
     const [notifications, setNotifications] = useState<boolean>(true)
 
     const handeNotificationToggle = () => {
         setNotifications(!notifications)
+    }
+
+    // CLICKBOARD COPY BUTTON
+    const copyUsername = () =>{
+        const text = '@sampleUsername'
+
+        navigator.clipboard.writeText(text)
+        // ПО КОПИРОВАНИЮ ВЫДАТЬ УВЕДОМЛЕНИЕ И СДЕЛАТЬ КУЛДАУН
     }
 
     return(
@@ -47,7 +57,7 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
                 </div>
 
                 <div className="chatInfo_actions">
-                    <div className="chatInfo_action">
+                    <div className="chatInfo_action_clickable" onClick={copyUsername}>
                         <img src={tag} alt="tag" />
                         <div className="chatInfo_action_infoContainer">
                             <div className="chatInfo_action_text">@sampletag</div>
