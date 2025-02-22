@@ -8,7 +8,7 @@ import Chat from "../chat/chat";
 
 const Chats: FC = () => {
 
-    const {handleMouseDown: handleChatsResize, blockSize: chatsSize} = useBlockResize(256, 636, 300)
+    const {handleMouseDown: handleChatsResize, blockSize: chatsSize} = useBlockResize(256, 636, 300, false)
 
     return (
         <div className="chats">

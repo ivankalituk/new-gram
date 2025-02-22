@@ -2,26 +2,24 @@ import { FC } from "react";
 import './chatInfo.scss'
 
 import cross from '../../assets/images/cross.svg'
-import edit from '../../assets/images/edit.svg'
-import { ReactSVG } from "react-svg";
 import { createRipple } from "../../utils/rippleAnimation";
 import sampleAvatar from '../../assets/images/sampleChat.jpg'
+import { useBlockResize } from "../../hooks/useBlockResize";
 
 const chatInfo: FC = () => {
 
+    const {handleMouseDown: handleChatsResize, blockSize: chatsSize} = useBlockResize(256, 636, 439, true)
     
     return(
         <div className="chatInfo">
             
-            <div className="chatInfo_resizer"></div>
+            <div className="chatInfo_resizer" onMouseDown={handleChatsResize}></div>
 
-            <div className="chatInfo_container" >
+            <div className="chatInfo_container" style={{ width: `${chatsSize}px` }}>
                 <div className="chatInfo_header">
-                    <ReactSVG src={cross} className="chatInfo_header_cross" onClick={createRipple}/>
                     <div className="chatInfo_header_heading">User Info</div>
                 </div>
 
-                {/* СДЕЛАТЬ ЕГО ОТДЕЛЬНЫМ КОМПОНЕНТОМ С ПРОСМОТРОМ ФОТО */}
                 <div className="chatInfo_mainInfo">
                     <img src={sampleAvatar} alt="avatar" />
 
