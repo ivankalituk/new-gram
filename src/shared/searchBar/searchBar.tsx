@@ -19,7 +19,8 @@ const SearchBar: FC = () => {
     return(
         <div className={searchBarFocus? "searchBar searchBar_focus" : "searchBar"}>
             <div className="searchBar_searchSvg">
-                <SearchSVG color={searchBarFocus? "#766ac8" : "#6b6b6b"}/>
+                {/* <ReactSVG src={search} className={searchBarFocus? "searchSVG focus" : "searchSVG"} /> */}
+                <SearchSVG focus={searchBarFocus}/>
             </div>
             <input type="text" placeholder="Search" onFocus={searchBarOnFocus} onBlur={searchBarOnBlur}/>
         </div>

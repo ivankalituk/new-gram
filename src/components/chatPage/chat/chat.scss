@@ -1,4 +1,4 @@
-@use '../../assets/styles/variables.scss' as vars;
+@use '../../../assets/styles/variables.scss' as vars;
 
 
 .chat {
@@ -53,7 +53,7 @@
                     color: white;
                 }
 
-                > .chat_info_muted svg{
+                > .chat_info_muted img{
                     margin-left: 8px;
                     width: 12px;
                     height: 12px;
@@ -85,18 +85,6 @@
         }
     }
 }
-
-
-// .ripple {
-//     position: absolute;
-//     width: 20px;
-//     height: 20px;
-//     background: rgba(255, 255, 255, 0.6);
-//     border-radius: 50%;
-//     opacity: 0.1;
-//     transform: scale(0);
-//     animation: ripple-animation 1.5s linear;
-// }
 
 @keyframes ripple-animation {
     to {

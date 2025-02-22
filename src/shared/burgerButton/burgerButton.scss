@@ -1,0 +1,54 @@
+@use '../../assets/styles/variables.scss' as vars;
+
+.burgerButton {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50%;
+
+  &:hover{
+    background-color: vars.$color-black-light;
+  }
+
+  & .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: scale(0);
+    animation: ripple-animation 1.5s linear;
+}
+
+  > .burgerButton_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px; /* Ширина всей иконки */
+    height: 12px; /* Высота всей иконки */
+    align-items: center;
+    // padding: 20px;
+    cursor: pointer;
+  }
+  
+  .burgerButton_bar {
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 2px;
+  }
+  
+  }
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}

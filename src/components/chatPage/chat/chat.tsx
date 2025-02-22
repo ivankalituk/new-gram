@@ -1,9 +1,9 @@
 import { FC } from "react";
 import './chat.scss'
-import sampleChatImg from '../../assets/images/sampleChat.jpg'
-import MutedSVG from "../../assets/controled images/mutedSVG";
-import { createRipple } from "../../utils/rippleAnimation";
+import sampleChatImg from '../../../assets/images/sampleChat.jpg'
+import { createRipple } from "../../../utils/rippleAnimation";
 import { Link } from "react-router-dom";
+import muted from '../../../assets/images/mute-volume-control-svgrepo-com.svg'
 
 const Chat: FC = () => {
     return(
@@ -14,7 +14,7 @@ const Chat: FC = () => {
                 <div className="chat_info_main">
                     <div className="chat_info_main_firstBlock">
                         <div className="chat_info_name">{"Chat name"}</div>
-                        <div className="chat_info_muted"><MutedSVG /></div>
+                        <div className="chat_info_muted"><img src={muted} alt="" /></div>
                     </div>
 
                     <div className="chat_info_main_secondBlock">

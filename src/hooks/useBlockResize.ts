@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 
-export const useBlockResize = (minSize: number, maxSize: number, initialSize: number) => {
+export const useBlockResize = (minSize: number, maxSize: number, initialSize: number, invert?: boolean) => {
 
+    invert = invert ?? false;
     const [blockSize, setBlockSize] = useState<number>(initialSize)
     const [isBlockResizing, setIsBlockResizing] = useState<boolean>(false)
 
@@ -12,7 +13,12 @@ export const useBlockResize = (minSize: number, maxSize: number, initialSize: nu
     const handleMouseMove = (e: MouseEvent) => {
         if (!isBlockResizing) return
         setBlockSize((prev) => {
-            const newWidth = prev + e.movementX;
+            let newWidth
+            if (invert){
+                newWidth = prev - e.movementX;
+            } else {
+                newWidth = prev + e.movementX;
+            }
             return Math.min(Math.max(newWidth, minSize), maxSize);
         });
     }

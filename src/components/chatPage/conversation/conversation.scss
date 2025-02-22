@@ -1,0 +1,69 @@
+@use '../../../assets/styles/variables.scss' as vars;
+
+.conversation {
+    flex: 1;
+    display: flex;
+
+    > .conversation_dialog{
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Общая высота экрана */
+        flex: 1;
+
+        > .conversation_heading {
+            height: 56px; /* Высота заголовка */
+            padding: 4px 13px 4px 23px;
+            box-sizing: border-box;
+            background-color: vars.$color-black-dark;
+            display: flex;
+            align-items: center;
+
+            > .conversation_heading_mainInfo {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                
+                > img {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+                > .conversation_heading_mainInfo_info {
+                    margin-left: 8px;
+                    > div:first-child {
+                        font-weight: 700;
+                        color: white;
+                    }
+
+                    > div:last-child {
+                        font-weight: 400;
+                        color: vars.$color-gray;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        > .conversation_main {
+            flex: 1; /* Используем оставшееся пространство */
+            color: white;
+            width: 50vw;
+            margin: 0 auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+            > .conversation_main_messages {
+                margin: 10px 0;
+                flex: 1;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
