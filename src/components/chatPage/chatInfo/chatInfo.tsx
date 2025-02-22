@@ -1,10 +1,9 @@
 import { FC, useState } from "react";
 import './chatInfo.scss'
 
-import cross from '../../assets/images/cross.svg'
-import { createRipple } from "../../utils/rippleAnimation";
-import sampleAvatar from '../../assets/images/sampleChat.jpg'
-import { useBlockResize } from "../../hooks/useBlockResize";
+import cross from '../../../assets/images/cross.svg'
+import sampleAvatar from '../../../assets/images/sampleChat.jpg'
+import { useBlockResize } from "../../../hooks/useBlockResize";
 
 interface ChatInfo {
     handleChatInfoHide: () => void,

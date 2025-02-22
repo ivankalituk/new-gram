@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import './messageInput.scss'
-import emoji from '../../assets/images/emoji.svg'
-import clip from '../../assets/images/clip.svg'
-import SendMessageSVG from "../../assets/controled images/sendMessageSVG";
+import emoji from '../../../assets/images/emoji.svg'
+import clip from '../../../assets/images/clip.svg'
+import SendMessageSVG from "../../../assets/controled images/sendMessageSVG";
 
 const MessageInput: FC = () => {
 

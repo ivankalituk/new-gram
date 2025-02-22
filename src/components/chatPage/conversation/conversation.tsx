@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import './conversation.scss'
 
-import chatImgSample from '../../assets/images/sampleChat.jpg'
+import chatImgSample from '../../../assets/images/sampleChat.jpg'
 import MessageInput from "../messageInput/messageInput";
 import Message from "../message/message";
 import ChatInfo from "../chatInfo/chatInfo";

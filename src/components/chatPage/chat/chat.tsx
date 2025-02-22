@@ -1,9 +1,9 @@
 import { FC } from "react";
 import './chat.scss'
-import sampleChatImg from '../../assets/images/sampleChat.jpg'
-import { createRipple } from "../../utils/rippleAnimation";
+import sampleChatImg from '../../../assets/images/sampleChat.jpg'
+import { createRipple } from "../../../utils/rippleAnimation";
 import { Link } from "react-router-dom";
-import muted from '../../assets/images/mute-volume-control-svgrepo-com.svg'
+import muted from '../../../assets/images/mute-volume-control-svgrepo-com.svg'
 
 const Chat: FC = () => {
     return(

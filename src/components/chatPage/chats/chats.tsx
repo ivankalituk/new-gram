@@ -1,9 +1,9 @@
 import { FC } from "react"
 import './chats.scss'
-import SearchBar from "../searchBar/searchBar";
-import BurgerButton from "../burgerButton/burgerButton";
-import { useBlockResize } from "../../hooks/useBlockResize";
-import NoScrollList from "../noScrollList/noScrollList";
+import SearchBar from "../../../shared/searchBar/searchBar";
+import BurgerButton from "../../../shared/burgerButton/burgerButton";
+import { useBlockResize } from "../../../hooks/useBlockResize";
+import NoScrollList from "../../../shared/noScrollList/noScrollList";
 import Chat from "../chat/chat";
 
 const Chats: FC = () => {
