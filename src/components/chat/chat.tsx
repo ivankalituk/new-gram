@@ -3,7 +3,6 @@ import './chat.scss'
 import sampleChatImg from '../../assets/images/sampleChat.jpg'
 import { createRipple } from "../../utils/rippleAnimation";
 import { Link } from "react-router-dom";
-import { ReactSVG } from "react-svg";
 import muted from '../../assets/images/mute-volume-control-svgrepo-com.svg'
 
 const Chat: FC = () => {
@@ -15,7 +14,7 @@ const Chat: FC = () => {
                 <div className="chat_info_main">
                     <div className="chat_info_main_firstBlock">
                         <div className="chat_info_name">{"Chat name"}</div>
-                        <div className="chat_info_muted"><ReactSVG src={muted} beforeInjection={(svg) => svg.setAttribute('style', 'fill: #aaaaaa;')}/></div>
+                        <div className="chat_info_muted"><img src={muted} alt="" /></div>
                     </div>
 
                     <div className="chat_info_main_secondBlock">
