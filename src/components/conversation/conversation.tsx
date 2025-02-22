@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import './conversation.scss'
 
 import chatImgSample from '../../assets/images/sampleChat.jpg'
@@ -7,12 +7,23 @@ import Message from "../message/message";
 import ChatInfo from "../chatInfo/chatInfo";
 
 const Conversation: FC = () => {
+
+    const [chatInfoShow, setChatInfoShow] = useState<boolean>(true)
+
+    const handleChatInfoShow = () => {
+        setChatInfoShow(true)
+    }
+
+    const handleChatInfoHide = () =>{
+        setChatInfoShow(false)
+    }
+
     return(
 
         <div className="conversation">
             <div className="conversation_dialog">
                 <div className="conversation_heading">
-                    <div className="conversation_heading_mainInfo">
+                    <div className="conversation_heading_mainInfo" onClick={handleChatInfoShow}>
                         <img src={chatImgSample} alt="chatLogo" />
                         <div className="conversation_heading_mainInfo_info">
                             <div>Чат имени слоновьего поноса</div>
@@ -31,7 +42,7 @@ const Conversation: FC = () => {
                 </div>
             </div>
 
-            <ChatInfo />
+            <ChatInfo handleChatInfoHide={handleChatInfoHide} chatInfoShow={chatInfoShow} />
         </div>
     )
 }
