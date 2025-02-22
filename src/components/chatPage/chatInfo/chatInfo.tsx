@@ -4,6 +4,10 @@ import './chatInfo.scss'
 import cross from '../../../assets/images/cross.svg'
 import sampleAvatar from '../../../assets/images/sampleChat.jpg'
 import { useBlockResize } from "../../../hooks/useBlockResize";
+import tag from '../../../assets/images/tag.svg'
+import username from '../../../assets/images/info.svg'
+import InputSwitch from "../../../shared/inputSwitch/inputSwitch";
+import notification from '../../../assets/images/notification.svg'
 
 interface ChatInfo {
     handleChatInfoHide: () => void,
@@ -14,6 +18,12 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
 
     const {handleMouseDown: handleChatsResize, blockSize: chatsSize} = useBlockResize(400, 500, 439, true)
     
+    const [notifications, setNotifications] = useState<boolean>(true)
+
+    const handeNotificationToggle = () => {
+        setNotifications(!notifications)
+    }
+
     return(
         <div className={chatInfoShow? "chatInfo" : "chatInfo close"}>
             
@@ -37,10 +47,30 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
                 </div>
 
                 <div className="chatInfo_actions">
-                    <div className="chatInfo_actions_username"></div>
-                    <div className="chatInfo_actions_bio"></div>
-                    <div className="chatInfo_actions_block"></div>
-                    <div className="chatInfo_actions_createContact"></div>
+                    <div className="chatInfo_action">
+                        <img src={tag} alt="tag" />
+                        <div className="chatInfo_action_infoContainer">
+                            <div className="chatInfo_action_text">@sampletag</div>
+                            <div className="chatInfo_action_explain">Username</div>
+                        </div>
+                    </div>
+
+                    <div className="chatInfo_action">
+                        <img src={username} alt="phone" />
+                        <div className="chatInfo_action_infoContainer">
+                            <div className="chatInfo_action_text">Короткое био с шуткой про твою мать, при чём био будет длинное, как и нос твоей матери чтоб я посмотрел на то как оно будет выглядеть в блоке</div>
+                            <div className="chatInfo_action_explain">Bio</div>
+                        </div>
+                    </div>
+
+                    <div className="chatInfo_action_switch" onClick={handeNotificationToggle}>
+                        <img src={notification} alt="notification" />
+                        <div className="chatInfo_action_switch_content">
+                            <div className="chatInfo_action_text">Notifications</div>
+                            <InputSwitch status = {notifications}/>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

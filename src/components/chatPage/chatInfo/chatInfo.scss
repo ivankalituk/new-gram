@@ -1,4 +1,5 @@
 @use '../../../assets/styles/variables.scss' as vars;
+
 .chatInfo {
     display: flex;
     max-width: 100%;
@@ -59,7 +60,7 @@
             }
 
             > .chatInfo_header_heading{
-                margin-left: 22px;
+                margin-left: 24px;
                 font-size: 20px;
             }
         }
@@ -104,6 +105,76 @@
                     font-weight: 400;
                     color: white;
                     opacity: 0.5;
+                }
+            }
+        }
+
+        > .chatInfo_actions{
+            display: flex;
+            flex-direction: column;
+            padding: 14px 8px;       
+
+            > .chatInfo_action{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                padding: 10px 20px;
+                border-radius: 12px;
+
+                >img{
+                    width: 30px;
+                    height: 30px;
+                }
+
+                > .chatInfo_action_infoContainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    > .chatInfo_action_text{
+                        color: white;
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
+
+                    > .chatInfo_action_explain{
+                        color: vars.$color-gray;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
+                
+            }
+
+            > .chatInfo_action_switch{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                padding: 10px 20px;
+                border-radius: 12px;
+                transition: background-color 0.3s;
+                
+                &:hover{
+                    background-color: vars.$color-black-light;
+                    transition: background-color 0.3s;
+                }
+
+                >img{
+                    width: 30px;
+                    height: 30px;
+                }
+
+                > .chatInfo_action_switch_content{
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    > .chatInfo_action_text{
+                        color: white;
+                        font-weight: 500;
+                        line-height: 20px;
+                    }
                 }
             }
         }
