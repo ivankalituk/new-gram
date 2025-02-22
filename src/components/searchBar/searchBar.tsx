@@ -1,8 +1,6 @@
 import { FC, useState } from "react";
 import './searchBar.scss'
 import SearchSVG from "../../assets/controled images/searchSVG";
-import { ReactSVG } from "react-svg";
-import search from "../../assets/images/search.svg"
 
 const SearchBar: FC = () => {
 
@@ -21,7 +19,8 @@ const SearchBar: FC = () => {
     return(
         <div className={searchBarFocus? "searchBar searchBar_focus" : "searchBar"}>
             <div className="searchBar_searchSvg">
-                <ReactSVG src={search} className={searchBarFocus? "searchSVG focus" : "searchSVG"} />
+                {/* <ReactSVG src={search} className={searchBarFocus? "searchSVG focus" : "searchSVG"} /> */}
+                <SearchSVG focus={searchBarFocus}/>
             </div>
             <input type="text" placeholder="Search" onFocus={searchBarOnFocus} onBlur={searchBarOnBlur}/>
         </div>

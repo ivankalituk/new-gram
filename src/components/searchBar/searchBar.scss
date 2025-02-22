@@ -16,7 +16,13 @@
         margin-left: 13px;
         margin-bottom: 1px;
 
-        > .searchSVG{
+        >.searchSVG{
+            fill: yellow;
+            margin-top: 10px;
+        }
+
+        > svg{
+
             stroke-width: 1;
             fill: #6b6b6b;
             stroke: #6b6b6b;
