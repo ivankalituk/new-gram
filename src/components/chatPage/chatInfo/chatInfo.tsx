@@ -8,6 +8,7 @@ import tag from '../../../assets/images/tag.svg'
 import username from '../../../assets/images/info.svg'
 import InputSwitch from "../../../shared/inputSwitch/inputSwitch";
 import notification from '../../../assets/images/notification.svg'
+import ModalNotification from "../../../shared/modalNotification/modalNotification";
 
 interface ChatInfo {
     handleChatInfoHide: () => void,
@@ -27,12 +28,21 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
     }
 
     // CLICKBOARD COPY BUTTON
-    const copyUsername = () =>{
-        const text = '@sampleUsername'
+    const [modalAlert, setModalAlert] = useState(false);
 
-        navigator.clipboard.writeText(text)
-        // ПО КОПИРОВАНИЮ ВЫДАТЬ УВЕДОМЛЕНИЕ И СДЕЛАТЬ КУЛДАУН
-    }
+    const handleModalAlertEnable = () => {
+      setModalAlert(true);
+    };
+    
+    const handleModalAlertDisable = () => {
+      setModalAlert(false);
+    };
+    
+    const copyUsername = () => {
+      const text = "@sampleTag";
+      navigator.clipboard.writeText(text);
+      handleModalAlertEnable();
+    };
 
     return(
         <div className={chatInfoShow? "chatInfo" : "chatInfo close"}>
@@ -83,6 +93,9 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
 
                 </div>
             </div>
+
+            <ModalNotification enabled={modalAlert} enableChangeCallback={handleModalAlertDisable}  text="Copied to clickboard"/>
+
         </div>
     )
 }
