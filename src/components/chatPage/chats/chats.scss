@@ -38,3 +38,20 @@
         cursor: ew-resize;
     }
 }
+
+
+
+@media (max-width: 930px) {
+    .chats{
+
+        .chats_container{
+            flex: 1;
+            max-width: none;
+            width: 10px;
+        }
+        
+        .chats_resizer{
+            display: none;
+        }
+    }
+}

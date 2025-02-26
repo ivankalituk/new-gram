@@ -46,9 +46,9 @@
         }
 
         > .conversation_main {
-            flex: 1; /* Используем оставшееся пространство */
+            flex: 1;
             color: white;
-            width: 50vw;
+            max-width: 90%;
             margin: 0 auto;
             padding: 0 16px;
             box-sizing: border-box;
@@ -63,6 +63,44 @@
                 flex-direction: column;
                 gap: 5px;
                 flex-direction: column-reverse;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1900px) {
+    .conversation{
+        > .conversation_dialog{
+            > .conversation_main{
+                width: 696px;
+                max-width: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    .conversation{
+        > .conversation_dialog{
+            
+            > .conversation_main{
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .conversation{
+        > .conversation_dialog{
+            
+            > .conversation_main{
+                width: 100%;
+                max-width: none;
+                margin: 0;
             }
         }
     }

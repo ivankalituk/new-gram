@@ -226,3 +226,15 @@
         cursor: e-resize;
     }
 }
+
+@media (max-width: 1450px) {
+    .chatInfo{
+        position: fixed;
+        right: 0;
+        width: 500px !important;
+
+        .chatInfo_resizer{
+            display: none;
+        }
+    }
+}
