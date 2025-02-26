@@ -13,7 +13,8 @@ const Message: FC <MessageInterface> = ({type}) => {
     return(
         <div className="message" style={type === "user"? {justifyContent: 'end'} : {backgroundColor: 'start'}}>
             <div className="message_container" style={type === "user"? {backgroundColor: '#766ac8'} : {backgroundColor: '#2c2c2c'}}>
-                <div className="message_text">SOME TEXT</div>
+                <span className="message_text">Очень длинное сообщение для понимания позиции времени и статус статус статус статус статус статус статус статус статус статус статус статус </span>
+                <span className="message_time">21:59</span>
             </div>
         </div>
     )
