@@ -24,7 +24,7 @@ const Chats: FC = () => {
                     <div className="chats_chatsList_list">
                         <Chat />
                         <Chat />
-                        <Chat />
+                        <Chat /> 
                         <Chat />
                     </div>
                 </div>
