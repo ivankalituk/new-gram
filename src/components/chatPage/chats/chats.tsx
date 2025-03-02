@@ -12,7 +12,7 @@ const Chats: FC = () => {
 
     return (
         <div className="chats" style={{ maxWidth: `${chatsSize + 2}px` }}>
-            <div className="chats_container"style={{ maxWidth: `${chatsSize}px` }} >
+            <div className="chats_container" style={{ maxWidth: `${chatsSize}px` }}>
                 <div className="chats_header">
                     <BurgerButton />
                     <SearchBar />
