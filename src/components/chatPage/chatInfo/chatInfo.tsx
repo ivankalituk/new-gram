@@ -91,7 +91,7 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
                             <InputSwitch status = {notifications}/>
                         </div>
                     </div>
-
+                    
                 </div>
             </div>
 
