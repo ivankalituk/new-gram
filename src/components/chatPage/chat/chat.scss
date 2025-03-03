@@ -25,10 +25,6 @@
         background-color: vars.$color-black-light;
     }
 
-    &:focus{
-        -webkit-tap-highlight-color: transparent;
-    }
-
     & .ripple{
         position: absolute;
         width: 20px;
@@ -43,7 +39,7 @@
     > .chat_info {
         font-weight: 500;
         flex: 1;
-        min-width: 0; // ВАЖНО! Позволяет тексту корректно сокращаться
+        min-width: 0;
 
         > .chat_info_main{
             display: flex;
@@ -81,11 +77,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: block;
-            min-width: 0; // Чтобы текст сжимался внутри flex-контейнера
+            min-width: 0;
 
             > span {
                 color: white;
-                flex-shrink: 0; // "You:" не должен сжиматься
+                flex-shrink: 0;
             }
         }
     }

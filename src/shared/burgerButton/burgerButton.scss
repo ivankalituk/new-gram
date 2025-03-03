@@ -12,6 +12,7 @@
 
   &:hover{
     background-color: vars.$color-black-light;
+    outline: none;
   }
 
   & .ripple {
