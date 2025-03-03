@@ -15,7 +15,7 @@ interface ChatInfo {
     chatInfoShow: boolean
 }
 
-const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
+const ChatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
 
     // RESIZING
     const {handleMouseDown: handleChatsResize, blockSize: chatsSize} = useBlockResize(400, 500, 439, true)
@@ -101,4 +101,4 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
     )
 }
 
-export default chatInfo
+export default ChatInfo

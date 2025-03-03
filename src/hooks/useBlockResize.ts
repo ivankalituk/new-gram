@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export const useBlockResize = (
   minSize: number,
@@ -12,40 +12,36 @@ export const useBlockResize = (
 
   const handleMouseDown = () => {
     setIsBlockResizing(true);
-    // Запрещаем выделение текста
-    document.body.style.userSelect = "none";
+    document.body.style.userSelect = "none"; // Запрещаем выделение текста
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isBlockResizing) return;
-    setBlockSize((prev) => {
-      let newWidth;
-      if (invert) {
-        newWidth = prev - e.movementX;
-      } else {
-        newWidth = prev + e.movementX;
-      }
-      return Math.min(Math.max(newWidth, minSize), maxSize);
-    });
-  };
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isBlockResizing) return;
+      setBlockSize((prev) => {
+        const newWidth = invert ? prev - e.movementX : prev + e.movementX;
+        return Math.min(Math.max(newWidth, minSize), maxSize);
+      });
+    },
+    [isBlockResizing, invert, minSize, maxSize]
+  )
 
-  const handleMouseUp = () => {
-    setIsBlockResizing(false);
-    // Включаем выделение текста обратно
-    document.body.style.userSelect = "auto";
-  };
+  const handleMouseUp = useCallback(() => {
+    setIsBlockResizing(false)
+    document.body.style.userSelect = "auto"
+  }, []);
 
   useEffect(() => {
     if (isBlockResizing) {
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
+      document.addEventListener("mousemove", handleMouseMove)
+      document.addEventListener("mouseup", handleMouseUp)
     }
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-  }, [isBlockResizing]);
+      document.removeEventListener("mousemove", handleMouseMove)
+      document.removeEventListener("mouseup", handleMouseUp)
+    }
+  }, [isBlockResizing, handleMouseMove, handleMouseUp])
 
-  return { blockSize, handleMouseDown };
+  return { blockSize, handleMouseDown }
 };

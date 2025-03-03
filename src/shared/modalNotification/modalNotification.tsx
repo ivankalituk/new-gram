@@ -28,7 +28,7 @@ const ModalNotification: FC<ModalNotificationProps> = ({ enabled, enableChangeCa
         clearTimeout(removeTimer);
       };
     }
-  }, [enabled]); 
+  }, [enabled, enableChangeCallback]); 
 
   if (!enabled) return null; 
 
