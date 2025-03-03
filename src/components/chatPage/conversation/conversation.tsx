@@ -10,7 +10,7 @@ import arrow from '../../../assets/images/arrowLeft.svg'
 
 const Conversation: FC = () => {
 
-    const [chatInfoShow, setChatInfoShow] = useState<boolean>(true)
+    const [chatInfoShow, setChatInfoShow] = useState<boolean>(window.innerWidth >= 1450? true : false)
 
     const handleChatInfoShow = () => {
         setChatInfoShow(true)

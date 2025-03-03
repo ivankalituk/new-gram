@@ -7,7 +7,7 @@
     > .conversation_dialog{
         display: flex;
         flex-direction: column;
-        height: 100vh; /* Общая высота экрана */
+        height: 100dvh; /* Общая высота экрана */
         flex: 1;
 
         > .conversation_heading {

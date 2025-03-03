@@ -4,20 +4,20 @@
     display: flex;
     max-width: 100%;
     transition: max-width 0.3s ease;
-    overflow: hidden;
-
+    overflow: hidden; 
     &.close {
         max-width: 0;
         transition: max-width 0.3s ease;
     }
 
-    > .chatInfo_container{
+    > .chatInfo_container {
         flex-shrink: 0;
         background-color: vars.$color-black-dark;
-        height: 100vh;
+        height: 100dvh;
+        overflow-y: auto; 
 
-        > .chatInfo_header{
-            height: 56px; /* Высота заголовка */
+        > .chatInfo_header {
+            height: 56px; 
             padding: 8px 13px;
             box-sizing: border-box;
             background-color: vars.$color-black-dark;
@@ -25,7 +25,7 @@
             align-items: center;
             color: white;
 
-            > .chatInfo_header_cross{
+            > .chatInfo_header_cross {
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
@@ -36,16 +36,15 @@
                 justify-content: space-around;
                 border-radius: 50%;
                 
-                > img{
+                > img {
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
                     height: 20px;
                     width: 20px;
-
                 }
-                
-                svg{
+
+                svg {
                     fill: vars.$color-gray;
                     width: 20px;
                     height: 20px;
@@ -53,33 +52,31 @@
                     stroke: vars.$color-gray;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: vars.$color-black-light;
                 }
             }
 
-            > .chatInfo_header_heading{
+            > .chatInfo_header_heading {
                 margin-left: 24px;
                 font-size: 20px;
             }
         }
 
-        > .chatInfo_mainInfo{
+        > .chatInfo_mainInfo {
             display: flex;
             align-items: start;
             position: relative;
             width: 100%;
             aspect-ratio: 1/1;
-            // background-color: red;
 
-            >img{
+            > img {
                 width: 100%;
                 aspect-ratio: 1/1;
             }
 
-            > .chatInfo_mainInfo_info{
+            > .chatInfo_mainInfo_info {
                 position: absolute;
-                // overflow: hidden;
                 bottom: 0;
                 left: 0;
                 width: 100%;
@@ -93,13 +90,13 @@
                 justify-content: flex-end;
                 pointer-events: none;
 
-                > .chatInfo_mainInfo_info_name{
+                > .chatInfo_mainInfo_info_name {
                     color: white;
                     font-size: 24px;
                     font-weight: 500;
                 }
 
-                > .chatInfo_mainInfo_info_additional{
+                > .chatInfo_mainInfo_info_additional {
                     font-size: 14px;
                     font-weight: 400;
                     color: white;
@@ -108,44 +105,43 @@
             }
         }
 
-        > .chatInfo_actions{
+        > .chatInfo_actions {
             display: flex;
             flex-direction: column;
             padding: 14px 8px;       
 
-            > .chatInfo_action{
+            > .chatInfo_action {
                 display: flex;
                 align-items: center;
                 gap: 24px;
                 padding: 10px 20px;
                 border-radius: 12px;
 
-                >img{
+                > img {
                     width: 30px;
                     height: 30px;
                 }
 
-                > .chatInfo_action_infoContainer{
+                > .chatInfo_action_infoContainer {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
 
-                    > .chatInfo_action_text{
+                    > .chatInfo_action_text {
                         color: white;
                         font-weight: 500;
                         line-height: 20px;
                     }
 
-                    > .chatInfo_action_explain{
+                    > .chatInfo_action_explain {
                         color: vars.$color-gray;
                         font-weight: 400;
                         font-size: 14px;
                     }
                 }
-                
             }
 
-            > .chatInfo_action_clickable{
+            > .chatInfo_action_clickable {
                 display: flex;
                 align-items: center;
                 gap: 24px;
@@ -154,37 +150,36 @@
                 transition: background-color 0.3s;
                 cursor: pointer;
 
-                >img{
+                > img {
                     width: 30px;
                     height: 30px;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: vars.$color-black-light;
                     transition: background-color 0.3s;
                 }
 
-                > .chatInfo_action_infoContainer{
+                > .chatInfo_action_infoContainer {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
 
-                    > .chatInfo_action_text{
+                    > .chatInfo_action_text {
                         color: white;
                         font-weight: 500;
                         line-height: 20px;
                     }
 
-                    > .chatInfo_action_explain{
+                    > .chatInfo_action_explain {
                         color: vars.$color-gray;
                         font-weight: 400;
                         font-size: 14px;
                     }
                 }
-                
             }
 
-            > .chatInfo_action_switch{
+            > .chatInfo_action_switch {
                 display: flex;
                 align-items: center;
                 gap: 24px;
@@ -192,23 +187,23 @@
                 border-radius: 12px;
                 transition: background-color 0.3s;
 
-                &:hover{
+                &:hover {
                     background-color: vars.$color-black-light;
                     transition: background-color 0.3s;
                 }
 
-                >img{
+                > img {
                     width: 30px;
                     height: 30px;
                 }
 
-                > .chatInfo_action_switch_content{
+                > .chatInfo_action_switch_content {
                     flex: 1;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
 
-                    > .chatInfo_action_text{
+                    > .chatInfo_action_text {
                         color: white;
                         font-weight: 500;
                         line-height: 20px;
@@ -218,7 +213,7 @@
         }
     }
 
-    > .chatInfo_resizer{
+    > .chatInfo_resizer {
         content: '';
         width: 1px;
         background-color: vars.$color-black-light;
@@ -227,25 +222,25 @@
 }
 
 @media (max-width: 1450px) {
-    .chatInfo{
+    .chatInfo {
         position: fixed;
         right: 0;
     }
 }
 
 @media (max-width: 600px) {
-    .chatInfo{
+    .chatInfo {
         position: fixed;
         width: 100% !important;
         max-width: 100% !important;
         transition: transform 0.3s ease-in-out;
         
-        &.close{
+        &.close {
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
         }
 
-        > .chatInfo_container{
+        > .chatInfo_container {
             width: 100%;
             flex: 1;
         }

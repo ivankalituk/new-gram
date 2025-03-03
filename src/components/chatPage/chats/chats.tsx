@@ -26,6 +26,16 @@ const Chats: FC = () => {
                         <Chat />
                         <Chat /> 
                         <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
+                        <Chat />
                     </div>
                 </div>
 
