@@ -17,6 +17,16 @@
         height: 100dvh;
         overflow-y: auto; 
 
+        &::-webkit-scrollbar{
+            width: 10px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: vars.$color-black-light;
+            
+            border: 2px solid vars.$color-black-dark;
+        }
+        
         > .chatInfo_header {
             position: sticky;
             height: 56px; 
