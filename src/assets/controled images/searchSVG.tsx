@@ -1,15 +1,15 @@
 import { FC } from "react";
 
 interface SvgIconProps {
-  focus: boolean
+  focus: boolean;
 }
 
-const SearchSVG: FC<SvgIconProps> = ({focus}) => (
-  <svg 
-    viewBox="0 0 32 32" 
-    xmlns="http://www.w3.org/2000/svg" 
-    className={focus? 'focus' : ''}
-    strokeWidth="1" 
+const SearchSVG: FC<SvgIconProps> = ({ focus }) => (
+  <svg
+    viewBox="0 0 32 32"
+    xmlns="http://www.w3.org/2000/svg"
+    className={focus ? "focus" : ""}
+    strokeWidth="1"
   >
     <defs>
       <style>{`.cls-1{fill:none;}`}</style>

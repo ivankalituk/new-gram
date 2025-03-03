@@ -1,89 +1,89 @@
-@use '../../../assets/styles/variables.scss' as vars;
+@use "../../../assets/styles/variables.scss" as vars;
 
 .chats {
+  display: flex;
+  height: 100dvh;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+
+  > .chats_container {
+    box-sizing: border-box;
+    background-color: vars.$color-black-dark;
     display: flex;
-    height: 100dvh;
+    flex-direction: column;
     width: 100%;
     flex: 1;
-    overflow: hidden;
-    
-    > .chats_container {
-        box-sizing: border-box;
-        background-color: vars.$color-black-dark;
+
+    > .chats_header {
+      height: 56px;
+      padding: 6px 13px 8px 13px;
+      box-sizing: border-box;
+      background-color: vars.$color-black-dark;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    > .chats_main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      > .chats_chatsList_list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px;
         display: flex;
         flex-direction: column;
         width: 100%;
-        flex: 1;
+        box-sizing: border-box;
 
-        > .chats_header {
-            height: 56px;
-            padding: 6px 13px 8px 13px;
-            box-sizing: border-box;
-            background-color: vars.$color-black-dark;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        &::-webkit-scrollbar {
+          width: 10px;
         }
 
-        > .chats_main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            
-            > .chats_chatsList_list {
-                flex: 1;
-                overflow-y: auto;
-                padding: 8px;
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                box-sizing: border-box;
+        &::-webkit-scrollbar-thumb {
+          background-color: vars.$color-black-light;
 
-                &::-webkit-scrollbar{
-                    width: 10px;
-                }
-                
-                &::-webkit-scrollbar-thumb {
-                    background-color: vars.$color-black-light;
-                    
-                    border: 2px solid vars.$color-black-dark;
-                }
-            }
+          border: 2px solid vars.$color-black-dark;
         }
+      }
     }
+  }
 
-    > .chats_resizer {
-        flex: 1;
-        max-width: 2px;
-        background-color: vars.$color-black-light;
-        cursor: ew-resize;
-    }
+  > .chats_resizer {
+    flex: 1;
+    max-width: 2px;
+    background-color: vars.$color-black-light;
+    cursor: ew-resize;
+  }
 }
 
 @media (max-width: 1000px) {
-    .chats {
-        > .chats_container {
-            flex: 1;
-            max-width: none;
-            width: 10px;
-        }
+  .chats {
+    > .chats_container {
+      flex: 1;
+      max-width: none;
+      width: 10px;
     }
+  }
 }
 
 @media (max-width: 770px) {
-    .chats {
-        flex: 1;
-        width: 1000px;
-        max-width: none !important;
+  .chats {
+    flex: 1;
+    width: 1000px;
+    max-width: none !important;
 
-        > .chats_container {
-            flex: 1;
-            max-width: none !important;
-        }
-
-        .chats_resizer {
-            display: none;
-        }
+    > .chats_container {
+      flex: 1;
+      max-width: none !important;
     }
+
+    .chats_resizer {
+      display: none;
+    }
+  }
 }

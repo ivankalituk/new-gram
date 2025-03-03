@@ -3,12 +3,16 @@ import "./modalNotification.scss";
 import notification from "../../assets/images/infoWhite.svg";
 
 interface ModalNotificationProps {
-  enabled: boolean
-  enableChangeCallback: () => void
-  text: string
+  enabled: boolean;
+  enableChangeCallback: () => void;
+  text: string;
 }
 
-const ModalNotification: FC<ModalNotificationProps> = ({ enabled, enableChangeCallback, text }) => {
+const ModalNotification: FC<ModalNotificationProps> = ({
+  enabled,
+  enableChangeCallback,
+  text,
+}) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -28,9 +32,9 @@ const ModalNotification: FC<ModalNotificationProps> = ({ enabled, enableChangeCa
         clearTimeout(removeTimer);
       };
     }
-  }, [enabled, enableChangeCallback]); 
+  }, [enabled, enableChangeCallback]);
 
-  if (!enabled) return null; 
+  if (!enabled) return null;
 
   return (
     <div className={visible ? "notification show" : "notification hide"}>

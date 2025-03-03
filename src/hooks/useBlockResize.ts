@@ -4,7 +4,7 @@ export const useBlockResize = (
   minSize: number,
   maxSize: number,
   initialSize: number,
-  invert?: boolean
+  invert?: boolean,
 ) => {
   invert = invert ?? false;
   const [blockSize, setBlockSize] = useState<number>(initialSize);
@@ -23,25 +23,25 @@ export const useBlockResize = (
         return Math.min(Math.max(newWidth, minSize), maxSize);
       });
     },
-    [isBlockResizing, invert, minSize, maxSize]
-  )
+    [isBlockResizing, invert, minSize, maxSize],
+  );
 
   const handleMouseUp = useCallback(() => {
-    setIsBlockResizing(false)
-    document.body.style.userSelect = "auto"
+    setIsBlockResizing(false);
+    document.body.style.userSelect = "auto";
   }, []);
 
   useEffect(() => {
     if (isBlockResizing) {
-      document.addEventListener("mousemove", handleMouseMove)
-      document.addEventListener("mouseup", handleMouseUp)
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
     }
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove)
-      document.removeEventListener("mouseup", handleMouseUp)
-    }
-  }, [isBlockResizing, handleMouseMove, handleMouseUp])
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isBlockResizing, handleMouseMove, handleMouseUp]);
 
-  return { blockSize, handleMouseDown }
+  return { blockSize, handleMouseDown };
 };

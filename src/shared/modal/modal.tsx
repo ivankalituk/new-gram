@@ -1,15 +1,14 @@
 import { FC } from "react";
-import './modal.scss'
+import "./modal.scss";
 
 const Modal: FC = () => {
-    return(
-        <div className="modal">
+  return (
+    <div className="modal">
+      <div className="modal_content">МЕСТО ДЛЯ МОДАЛЬНОГО КОМПОНЕНТА</div>
 
-            <div className="modal_content">МЕСТО ДЛЯ МОДАЛЬНОГО КОМПОНЕНТА</div>
+      <div className="modal_background"></div>
+    </div>
+  );
+};
 
-            <div className="modal_background"></div>
-        </div>
-    )
-}
-
-export default Modal
+export default Modal;

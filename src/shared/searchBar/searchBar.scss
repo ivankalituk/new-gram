@@ -1,65 +1,71 @@
-@use '../../assets/styles/variables.scss' as vars;
+@use "../../assets/styles/variables.scss" as vars;
 
-.searchBar{
-    border: 2px solid vars.$color-black-light;
-    height: 40px;
-    display: flex;
+.searchBar {
+  border: 2px solid vars.$color-black-light;
+  height: 40px;
+  display: flex;
+  flex: 1;
+  background-color: vars.$color-black-light;
+  border-radius: 22px;
+  align-items: center;
+  transition:
+    background-color 0.3s,
+    border 0.3s;
+
+  > .searchBar_searchSvg {
+    width: 22px;
+    height: 22px;
+    margin-left: 13px;
+    margin-bottom: 1px;
+
+    > svg {
+      stroke-width: 1;
+      fill: #6b6b6b;
+      stroke: #6b6b6b;
+      transition: fill 0.3s;
+
+      &.focus {
+        fill: #766ac8;
+        stroke: #766ac8;
+        transition:
+          fill 0.3s,
+          stroke 0.3s;
+      }
+    }
+  }
+
+  > input {
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px 6px 11px;
     flex: 1;
-    background-color: vars.$color-black-light;
-    border-radius: 22px;
-    align-items: center;
-    transition: background-color 0.3s, border 0.3s;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-radius: 0 20px 20px 0;
+    color: vars.$color-gray;
+    font-weight: 400;
+    font-family: Roboto;
+    font-size: 16px;
 
-    > .searchBar_searchSvg{
-        width: 22px;
-        height: 22px;
-        margin-left: 13px;
-        margin-bottom: 1px;
-
-        > svg{
-            stroke-width: 1;
-            fill: #6b6b6b;
-            stroke: #6b6b6b;
-            transition: fill 0.3s;
-
-            &.focus{
-                fill: #766ac8;
-                stroke: #766ac8;
-                transition: fill 0.3s, stroke 0.3s;
-            }
-        }
+    &::placeholder {
+      font-weight: 400;
+      font-family: Roboto;
+      font-size: 16px;
+      color: vars.$color-gray;
     }
 
-    > input{
-        height: 100%;
-        width: 100%;
-        padding: 6px 9px 6px 11px;
-        flex: 1;
-        background-color: transparent;
-        border: 0;
-        outline: 0;
-        border-radius: 0 20px 20px 0;
-        color: vars.$color-gray;
-        font-weight: 400;
-        font-family: Roboto;
-        font-size: 16px;
-
-        &::placeholder{
-            font-weight: 400;
-            font-family: Roboto;
-            font-size: 16px;
-            color: vars.$color-gray;
-        }
-
-        &:focus{
-            border-color: vars.$color-blue-light;
-            transition: background-color 0.3s;
-        }
+    &:focus {
+      border-color: vars.$color-blue-light;
+      transition: background-color 0.3s;
     }
+  }
 }
 
-.searchBar_focus{
-    border: 2px solid vars.$color-blue-light;
-    background-color: vars.$color-black-dark;
-    transition: border 0.3, background-color 0.3;
+.searchBar_focus {
+  border: 2px solid vars.$color-blue-light;
+  background-color: vars.$color-black-dark;
+  transition:
+    border 0.3,
+    background-color 0.3;
 }

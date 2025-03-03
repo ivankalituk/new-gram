@@ -1,4 +1,4 @@
-@use '../../assets/styles/variables.scss' as vars;
+@use "../../assets/styles/variables.scss" as vars;
 
 .burgerButton {
   position: relative;
@@ -10,7 +10,7 @@
   justify-content: space-around;
   border-radius: 50%;
 
-  &:hover{
+  &:hover {
     background-color: vars.$color-black-light;
     outline: none;
   }
@@ -24,9 +24,9 @@
     opacity: 0.1;
     transform: scale(0);
     animation: ripple-animation 1.5s linear;
-}
+  }
 
-  > .burgerButton_container{
+  > .burgerButton_container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     // padding: 20px;
     cursor: pointer;
   }
-  
+
   .burgerButton_bar {
     width: 18px;
     height: 2px;
@@ -44,14 +44,13 @@
     opacity: 0.5;
     border-radius: 2px;
   }
-  
-  }
+}
 
 @keyframes ripple-animation {
-    to {
-        transform: scale(10);
-        opacity: 0;
-    }
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
 }
 
 @media (hover: none) {
