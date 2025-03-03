@@ -261,3 +261,32 @@
         }
     }
 }
+
+@media (hover: none) {
+    .chatInfo{
+        > .chatInfo_container{
+            > .chatInfo_header{
+                > .chatInfo_header_cross{
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            > .chatInfo_actions{
+                > .chatInfo_action_clickable{
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+
+                > .chatInfo_action_switch{
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+  

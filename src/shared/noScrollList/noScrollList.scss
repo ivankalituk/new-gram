@@ -37,7 +37,7 @@
       color: vars.$color-blue-light;
     }
 
-    .noScrollList_item_line {
+    > .noScrollList_item_line {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -49,4 +49,14 @@
     }
   }
 }
-  
+
+@media (hover: none) {
+  .noScrollList{
+
+    .noScrollList_item{
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

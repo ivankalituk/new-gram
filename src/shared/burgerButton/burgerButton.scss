@@ -53,3 +53,9 @@
         opacity: 0;
     }
 }
+
+@media (hover: none) {
+  .burgerButton:hover {
+    background-color: transparent;
+  }
+}

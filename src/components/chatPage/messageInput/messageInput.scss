@@ -75,3 +75,14 @@
         }
     }
 }
+
+@media (hover: none) {
+    .messageInput{
+        .messageInput_accept{
+            &:hover {
+                background-color: vars.$color-black-dark;
+            }
+        }
+    }
+}
+  

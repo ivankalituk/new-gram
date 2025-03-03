@@ -93,3 +93,9 @@
         opacity: 0;
     }
 }
+
+@media (hover: none) {
+    .chat:hover {
+      background-color: transparent;
+    }
+}
