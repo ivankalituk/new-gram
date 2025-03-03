@@ -5,7 +5,7 @@
     max-width: 100%;
     transition: max-width 0.3s ease;
     overflow: hidden;
-    
+
     &.close {
         max-width: 0;
         transition: max-width 0.3s ease;
@@ -14,7 +14,6 @@
     > .chatInfo_container{
         flex-shrink: 0;
         background-color: vars.$color-black-dark;
-        // display: flex;
         height: 100vh;
 
         > .chatInfo_header{
@@ -231,13 +230,24 @@
     .chatInfo{
         position: fixed;
         right: 0;
-
-        .chatInfo_resizer{
-            // display: none;
-        }
     }
 }
 
-@media (max-width: 770px) {
-    
+@media (max-width: 600px) {
+    .chatInfo{
+        position: fixed;
+        width: 100% !important;
+        max-width: 100% !important;
+        transition: transform 0.3s ease-in-out;
+        
+        &.close{
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        > .chatInfo_container{
+            width: 100%;
+            flex: 1;
+        }
+    }
 }

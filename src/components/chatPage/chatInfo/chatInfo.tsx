@@ -45,11 +45,12 @@ const chatInfo: FC <ChatInfo> = ({handleChatInfoHide, chatInfoShow}) => {
     };
 
     return(
-        <div className={chatInfoShow? "chatInfo" : "chatInfo close"}>
+        <div className={chatInfoShow? "chatInfo open" : "chatInfo close"}>
             
             <div className="chatInfo_resizer" onMouseDown={handleChatsResize}></div>
 
             <div className="chatInfo_container" style={{ width: `${chatsSize}px` }}>
+                
                 <div className="chatInfo_header">
                     <div className="chatInfo_header_cross" onClick={handleChatInfoHide}>
                         <img src={cross} alt="close" />
