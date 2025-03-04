@@ -2,7 +2,20 @@ import { FC } from "react";
 import logo from '../../../assets/images/mainLogo.svg'
 import './facePanel.scss'
 
-const FacePanel: FC = () => {
+interface FacePanelInterface {
+    handleCurrentPanelChange: (panel: string) => void
+}
+
+const FacePanel: FC <FacePanelInterface> =({handleCurrentPanelChange}) => {
+
+    const handleLogIn = () =>{
+        handleCurrentPanelChange('login')
+    }
+
+    const handleRegistration = () =>{
+        handleCurrentPanelChange('registration')
+    }
+
     return(
         <div className="facePanel">
             <div className="facePanel_logo">
@@ -12,8 +25,8 @@ const FacePanel: FC = () => {
             <div className="facePanel_explain">Choose your variant</div>
 
             <div className="facePanel_type">
-                <button>Log In</button>
-                <button>Registration</button>
+                <button onClick={handleLogIn}>Log In</button>
+                <button onClick={handleRegistration}>Registration</button>
             </div>
         </div>
     )
