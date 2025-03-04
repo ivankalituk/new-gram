@@ -1,0 +1,52 @@
+@use "../../../assets/styles/variables.scss" as vars;
+
+
+.facePanel{
+    padding: 40px 0;
+    > .facePanel_logo{
+        display: flex;
+        justify-content: space-around;
+
+        >img{
+            max-width: 70%;
+        }
+    }
+
+    > .facePanel_heading{
+        margin-top: 20px;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+
+    > .facePanel_explain{
+        margin-top: 30px;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        opacity: 0.5;
+    }
+
+    > .facePanel_type{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        > button{
+            background-color: vars.$color-black-light;
+            border: none;
+            height: 40px;
+            color: vars.$color-blue-light;
+            font-family: Roboto;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border-radius: 12px;
+            &:hover{
+                background-color: rgba(vars.$color-black-dark, 0.9);
+            }
+        }
+    }
+
+}
