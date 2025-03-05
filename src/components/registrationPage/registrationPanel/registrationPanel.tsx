@@ -4,11 +4,7 @@ import { FC } from "react";
 // авторизация простая
 
 const RegistrationPanel: FC = () => {
-    return(
-        <div className="registrationPanel">
-            Registration
-        </div>
-    )
-}
+  return <div className="registrationPanel">Registration</div>;
+};
 
-export default RegistrationPanel
+export default RegistrationPanel;
