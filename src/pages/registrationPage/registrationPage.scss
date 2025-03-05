@@ -1,0 +1,24 @@
+@use "../../assets/styles/variables.scss" as vars;
+
+.registrationPage {
+  background-color: vars.$color-black-dark;
+  height: 100dvh;
+
+  > .registrationPage_panel {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: 800px;
+
+    > .registrationPage_panel_container {
+      background-color: vars.$color-black-light;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 12px;
+    }
+  }
+}

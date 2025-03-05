@@ -1,77 +1,87 @@
-@use '../../../assets/styles/variables.scss' as vars;
+@use "../../../assets/styles/variables.scss" as vars;
 
-.messageInput{
-    height: 56px;
-    width: 100%;
+.messageInput {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  > .messageInput_bar {
+    flex: 1;
+    background-color: vars.$color-black-dark;
+    border-radius: 12px;
+    padding: 17.5px 0 17.5px 12px;
+    box-sizing: border-box;
     display: flex;
+    align-items: center;
     gap: 8px;
-    margin-bottom: 20px;
 
-    > .messageInput_bar{
-        flex: 1;
-        background-color: vars.$color-black-dark;
-        border-radius: 12px;
-        padding: 17.5px 0 17.5px 12px ;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-
-        > img{
-            height: 24px;
-            width: 24px;
-        }
-
-        > input{
-            flex: 1;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            color: white;
-            font-weight: 400;
-            font-family: Roboto;
-            font-size: 16px;
-        }
-
-        > .messageInput_bar_attachments{
-            padding: 0 16px 0 8px;
-        }
+    > img {
+      height: 24px;
+      width: 24px;
     }
 
-    > .messageInput_accept{
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        border: none;
-        outline: none;
-        background-color: vars.$color-black-dark;
-        transition: 0.3s;
-
-        >svg {
-            position: relative;
-            left: -0.5px;
-                g{
-                stroke: vars.$color-blue-light;
-                stroke-width: 0.5;
-                fill: vars.$color-blue-light;
-                transition: fill 0.3s;
-
-                &.focus{
-                    fill: white;
-                    transition: fill 0.3s;
-                    stroke: white;
-                    stroke-width: 0.5;
-                }
-            }
-        }
-
-        &:hover{
-            background-color: vars.$color-blue-light;
-            transition: 0.3s;
-        }
+    > input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: white;
+      font-weight: 400;
+      font-family: Roboto;
+      font-size: 16px;
     }
+
+    > .messageInput_bar_attachments {
+      padding: 0 16px 0 8px;
+    }
+  }
+
+  > .messageInput_accept {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: vars.$color-black-dark;
+    transition: 0.3s;
+
+    > svg {
+      position: relative;
+      left: -0.5px;
+      g {
+        stroke: vars.$color-blue-light;
+        stroke-width: 0.5;
+        fill: vars.$color-blue-light;
+        transition: fill 0.3s;
+
+        &.focus {
+          fill: white;
+          transition: fill 0.3s;
+          stroke: white;
+          stroke-width: 0.5;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: vars.$color-blue-light;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media (hover: none) {
+  .messageInput {
+    .messageInput_accept {
+      &:hover {
+        background-color: vars.$color-black-dark;
+      }
+    }
+  }
 }

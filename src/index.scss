@@ -1,10 +1,15 @@
-@use './assets/styles/fonts';
+@use "./assets/styles/fonts";
 
-body{
+body {
   font-family: "Roboto";
   font-weight: 600;
   font-style: normal;
   margin: 0;
   padding: 0;
   font-size: 16px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }

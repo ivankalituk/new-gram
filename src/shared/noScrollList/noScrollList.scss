@@ -1,16 +1,16 @@
-@use '../../assets/styles/variables.scss' as vars;
+@use "../../assets/styles/variables.scss" as vars;
 
-.noScrollList{
+.noScrollList {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none; /* Скрываем скроллбар в Firefox */
   -ms-overflow-style: none; /* Скрываем скроллбар в IE */
-  padding: 0 6px ;
+  padding: 0 6px;
   // border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Тонкая линия для основы */
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.251);
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 
@@ -29,15 +29,15 @@
     font-size: 16px;
     position: relative;
 
-    &:hover{
+    &:hover {
       background-color: vars.$color-black-light;
     }
 
-    &.active{
+    &.active {
       color: vars.$color-blue-light;
     }
 
-    .noScrollList_item_line {
+    > .noScrollList_item_line {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -49,4 +49,13 @@
     }
   }
 }
-  
+
+@media (hover: none) {
+  .noScrollList {
+    .noScrollList_item {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

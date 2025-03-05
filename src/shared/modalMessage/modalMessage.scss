@@ -1,49 +1,49 @@
-@use '../../assets/styles/variables.scss' as vars;
+@use "../../assets/styles/variables.scss" as vars;
 
-.modalMessage{
-    position: fixed;
+.modalMessage {
+  position: fixed;
+  display: flex;
+  right: 10px;
+  bottom: 10px;
+  height: 80px;
+  width: 400px;
+  background-color: vars.$color-black-dark;
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 10px;
+
+  > img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+
+  > .modalMessage_content {
     display: flex;
-    right: 10px;
-    bottom: 10px;
-    height: 80px;
-    width: 400px;
-    background-color: vars.$color-black-dark;
-    padding: 10px;
-    box-sizing: border-box;
-    gap: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
 
-    >img{
-        height: 100%;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
+    > .modalMessage_content_userName {
+      color: white;
+      word-wrap: nowrap;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%; /* Ограничиваем ширину */
     }
 
-    > .modalMessage_content{
-        display: flex;
-        overflow: hidden;
-        flex-direction: column;
-        justify-content:start;
-        gap: 5px;
-
-        > .modalMessage_content_userName{
-            color: white;
-            word-wrap: nowrap;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%; /* Ограничиваем ширину */
-        }
-
-        > .modalMessage_content_text{
-            font-weight: 400;
-            opacity: 0.5;
-            color: white;
-            font-size: 14px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;   
-            -webkit-line-clamp: 2; 
-            overflow: hidden;                  
-            text-overflow: ellipsis;  
-        }
+    > .modalMessage_content_text {
+      font-weight: 400;
+      opacity: 0.5;
+      color: white;
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 }

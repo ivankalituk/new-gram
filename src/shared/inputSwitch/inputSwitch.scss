@@ -1,37 +1,41 @@
-@use '../../assets/styles/variables.scss' as vars;
+@use "../../assets/styles/variables.scss" as vars;
 
-.inputSwitch{
-    > .inputSwitch_bar{
-        height: 14px;
-        content: '';
-        width: 35px;
-        border-radius: 7px;
-        background-color: vars.$color-gray;
-        position: relative;
-        transition: background-color 0.3s;
+.inputSwitch {
+  > .inputSwitch_bar {
+    height: 14px;
+    content: "";
+    width: 35px;
+    border-radius: 7px;
+    background-color: vars.$color-gray;
+    position: relative;
+    transition: background-color 0.3s;
 
-        &.active{
-            background-color: vars.$color-blue-light;
-            transition: background-color 0.3s;
-        }
-
-        > .inputSwitch_switch_thumb{
-            height: 15px;
-            width: 15px;
-            content: '';
-            border-radius: 50%;
-            position: absolute;
-            border: 2px solid vars.$color-gray;
-            top: -2px;
-            left: -1px;
-            background-color: vars.$color-black-dark;
-            transition: left 0.3s, border 0.3s;
-
-            &.active{
-                transition: left 0.3s, border 0.3s;
-                left: 16px;
-                border: 2px solid vars.$color-blue-light;
-            }
-        }
+    &.active {
+      background-color: vars.$color-blue-light;
+      transition: background-color 0.3s;
     }
+
+    > .inputSwitch_switch_thumb {
+      height: 15px;
+      width: 15px;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid vars.$color-gray;
+      top: -2px;
+      left: -1px;
+      background-color: vars.$color-black-dark;
+      transition:
+        left 0.3s,
+        border 0.3s;
+
+      &.active {
+        transition:
+          left 0.3s,
+          border 0.3s;
+        left: 16px;
+        border: 2px solid vars.$color-blue-light;
+      }
+    }
+  }
 }

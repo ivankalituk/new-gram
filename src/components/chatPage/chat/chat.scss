@@ -1,94 +1,99 @@
-@use '../../../assets/styles/variables.scss' as vars;
-
+@use "../../../assets/styles/variables.scss" as vars;
 
 .chat {
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    height: 72px;
-    box-sizing: border-box;
-    padding: 9px;
-    border-radius: 12px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    overflow: hidden; // Ограничение по родителю
+  flex-shrink: 0;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  height: 72px;
+  box-sizing: border-box;
+  padding: 9px;
+  border-radius: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow: hidden; // Ограничение по родителю
 
-    > img {
-        height: 100%;
-        border-radius: 50%;
-        flex-shrink: 0; // Не даём картинке сжиматься
-    }
+  > img {
+    height: 100%;
+    border-radius: 50%;
+    flex-shrink: 0; // Не даём картинке сжиматься
+  }
 
-    &:hover {
-        background-color: vars.$color-black-light;
-    }
+  &:hover {
+    background-color: vars.$color-black-light;
+  }
 
-    & .ripple{
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 50%;
-        opacity: 0.1;
-        transform: scale(0);
-        animation: ripple-animation 0.5s linear;
-    }
+  & .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: scale(0);
+    animation: ripple-animation 0.5s linear;
+  }
 
-    > .chat_info {
-        font-weight: 500;
-        flex: 1;
-        min-width: 0; // ВАЖНО! Позволяет тексту корректно сокращаться
+  > .chat_info {
+    font-weight: 500;
+    flex: 1;
+    min-width: 0;
 
-        > .chat_info_main{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    > .chat_info_main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-            > .chat_info_main_firstBlock{
-                display: flex;
-                align-items: center;
+      > .chat_info_main_firstBlock {
+        display: flex;
+        align-items: center;
 
-                > .chat_info_name{
-                    color: white;
-                }
-
-                > .chat_info_muted img{
-                    margin-left: 8px;
-                    width: 12px;
-                    height: 12px;
-                }
-            }
-
-            > .chat_info_main_secondBlock{
-
-                >.chat_info_time{
-                    font-size: 12px;
-                    font-weight: 400;
-                    color: vars.$color-gray-dark;
-                }
-            }
+        > .chat_info_name {
+          color: white;
         }
 
-        > .chat_info_messange {
-            color: vars.$color-gray;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: block;
-            min-width: 0; // Чтобы текст сжимался внутри flex-контейнера
-
-            > span {
-                color: white;
-                flex-shrink: 0; // "You:" не должен сжиматься
-            }
+        > .chat_info_muted img {
+          margin-left: 8px;
+          width: 12px;
+          height: 12px;
         }
+      }
+
+      > .chat_info_main_secondBlock {
+        > .chat_info_time {
+          font-size: 12px;
+          font-weight: 400;
+          color: vars.$color-gray-dark;
+        }
+      }
     }
+
+    > .chat_info_messange {
+      color: vars.$color-gray;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      min-width: 0;
+
+      > span {
+        color: white;
+        flex-shrink: 0;
+      }
+    }
+  }
 }
 
 @keyframes ripple-animation {
-    to {
-        transform: scale(10);
-        opacity: 0;
-    }
+  to {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+@media (hover: none) {
+  .chat:hover {
+    background-color: transparent;
+  }
 }
